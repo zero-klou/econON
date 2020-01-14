@@ -1,0 +1,27 @@
+.header {
+    min-height: 235px;
+    padding: 40px 0 60px;
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        width: 400px;
+        height: 72px;
+    }
+    &__label {
+        margin-top: 18px;
+        text-align: center;
+        color: $main-color;
+        opacity: 0.5;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        padding: 20px 0 20px;
+        min-height: 0;
+        &__logo {
+            width: 300px;
+        }
+    }
+}

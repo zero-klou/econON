@@ -1,0 +1,85 @@
+.calculator {
+    margin: 0 auto;
+    width: 370px;
+    min-height: 600px;
+    border-radius: 5px;
+    border: 1px solid $sub-color;
+    &-section {
+        display: none;
+    }
+    &__header {
+        min-height: 100px;
+        padding-top: 37px;
+        padding-bottom: 27px;
+        padding-right: 29px;
+        padding-left: 29px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        text-align: right;
+        overflow: auto;
+    }
+    &__table {
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        text-align: right; 
+    }
+    &__account {
+        color: $main-color;
+        font-size: 18px;
+    }
+    &__result {
+        color: $sub-color;
+        margin-top: 18px;
+        font-size: 60px;
+    }
+    &__main {
+        display: table;
+    }
+    &__btn {
+        width: 92px;
+        height: 92px;
+        border: none;
+        outline: none;
+        background-image: linear-gradient(to right, #f7f7f7 0%, #f1f1f1 100%);
+        font-size: 22px;
+        color: $main-color;
+        &_indigo {
+            color: #fff;
+            font-size: 22px;
+            background-image: none;
+            background-color: $sub-color;
+        }
+        &_big {
+            width: 184px;
+            background-color: $main-color-2; 
+            background-image: none; 
+            color: #ffffff;
+            border-bottom-right-radius: 5px;
+        }
+        &:active, &:focus {
+            outline: none;
+        }
+        &:nth-child(17) {
+            border-bottom-left-radius: 5px;
+        }
+        &:hover {
+            filter: brightness(85%);
+            cursor: pointer;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .calculator {
+        width: 298px;
+        min-height: 0;
+        &__btn {
+            width: 74px;
+            height: 74px;
+            &_big {
+                width: 148px;
+            }
+        }
+    }
+}

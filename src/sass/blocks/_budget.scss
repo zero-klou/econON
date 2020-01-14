@@ -1,0 +1,146 @@
+.budget {
+    display: none;
+    &__item {
+        @include border;
+        padding: 14px 40px;
+        margin-bottom: 70px;
+        &_bdn {
+            border: none;
+            position: relative;
+            &::before {
+                content: '';
+                width: 8px;
+                height: 120px;
+                background: #FF7E7E;
+                border-radius: 15px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 102px;
+            }
+        }
+        &-header {
+            margin-bottom: 15px;
+        }
+        &-value {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            margin-bottom: 14px;
+        }
+        &-title {
+            color: $main-color;
+            opacity: 0.5;
+            font-size: 32px;
+            &_op1 {
+                opacity: 1;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+        &-score {
+            color: $main-color-2;
+            margin-left: 18px;
+            font-size: 32px;
+        }
+        &-wrapper {
+            height: 235px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        &-row {
+            display: flex;
+            font-size: 25px;
+            color: $main-color-2;
+            justify-content: space-around;
+            text-align: center;
+            border-bottom: 1px solid $sub-color;
+            &:first-child {
+                font-size: 32px;
+                border-bottom: 2px solid $sub-color;
+                color: $main-color;
+            }
+        }
+        &-category {
+            width: 70%;
+            &:hover:not(.table-name) {
+                transform: translateX(-200px);
+                cursor: pointer;
+                &::before {
+                    content: 'удалить';
+                    font-size: 16px;
+                    color: #DD5044;
+                    position: absolute;
+                    left: 440px;
+                    top: 7px;
+                }
+            }
+
+        }
+        &-wasted {
+            width: 30%;
+        }
+    }
+    &__btns {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 1139px) {
+    .budget {
+        &__item {
+            &-category {
+                width: 38%;
+                &:hover:not(.table-name) {
+                    transform: none;
+                    cursor: none;
+                }
+            }
+            &-row {
+                &:first-child {
+                    font-size: 27px;
+                }
+                font-size: 22px;
+            }
+            &-title {
+                font-size: 27px;
+                &_op1 {
+                    margin-bottom: 0;
+                }
+            }
+            &_bdn {
+                &:before {
+                    top: 53px;
+                }
+            }
+            &-score {
+                font-size: 27px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .budget {
+        &__item {
+            width: 98%;
+            border-width: 2px;
+            padding: 0;
+            &-wrapper {
+                height: 175px;
+            }
+            &-row {
+                &:first-child {
+                    font-size: 16px;
+                }
+                font-size: 16px;
+                height: 46px;
+                align-items: center;
+            }
+            &_bdn {
+                display: none;
+            }
+        }
+    }
+}

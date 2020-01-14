@@ -1,0 +1,6 @@
+@mixin border {
+    width: 80%;
+    margin: 0 auto;
+    border: 3px solid $sub-color;
+    border-radius: 15px;
+}

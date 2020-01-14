@@ -1,0 +1,37 @@
+.account {
+    min-height: 317px;
+    padding: 77px 0 60px;
+    display: flex;
+    justify-content: center;
+    color: $sub-color;
+    &__text {
+        font-size: 25px;
+        opacity: 0.6;
+    }
+    &__score {
+        font-size: 120px;
+    }
+}
+
+@media (max-width: 1139px) {
+    .account {
+        padding: 43px 0 28px;
+        min-height: 0;
+        &__score {
+            font-size: 90px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .account {
+        &__score {
+            font-size: 45px;
+        }
+        &__text {
+            font-size: 15px;
+        }
+    }
+}

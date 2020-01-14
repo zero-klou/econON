@@ -1,0 +1,46 @@
+@import 'base/_fonts';
+@import 'base/_variables';
+@import 'base/_mixins';
+@import 'libs/_bootstrap-reboot.min';
+@import 'blocks/_header';
+@import 'blocks/_account';
+@import 'blocks/_nav';
+@import 'blocks/_budget';
+@import 'blocks/_progressbar';
+@import 'blocks/_button';
+@import 'blocks/_bill';
+@import 'blocks/_overlay';
+@import 'blocks/_plans';
+@import 'blocks/_calculator';
+
+* {
+    font-family: 'Montserrat';
+    transition: all 0.5s;
+}
+
+body {
+    background: url('../img/bg/main-bg.png');
+    padding-bottom: 70px;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 10px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding-bottom: 70px;
+}
+
+.active-section {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding-bottom: 20px;
+    }
+    body {
+        padding-bottom: 0;
+    }
+}

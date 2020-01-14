@@ -1,0 +1,272 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EconON</title>
+    <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <header class="header">
+        <img src="img/logo/EconON.svg" alt="logo" class="header__logo">
+        <div class="header__label">Пора задуматься о бюджете</div>
+    </header>
+    <div class="container">
+        <div class="account">
+            <div class="account__text">Баланс</div>
+            <div class="account__score" id="account-score">6030 руб</div>
+        </div>
+        
+        <nav class="nav">
+            <div class="nav__burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </div>
+            <ul>
+                <li class="active">Бюджет</li>
+                <li>Счета</li>
+                <li>План</li>
+                <li>Калькулятор</li>
+            </ul>
+        </nav>
+
+        <section class="budget active-section">
+            <div class="budget__item">
+                <div class="budget__item-header">
+                    <div class="budget__item-value">
+                        <h2 class="budget__item-title">Расходы</h2>
+                        <div class="budget__item-score costs" id="waste">900 руб</div>
+                    </div>
+                </div>
+                <div class="budget__item-body">
+                    <div class="budget__item-wrapper">
+                        <div class="budget__item-row table-title">
+                            <div class="budget__item-category table-name">Категория:</div>
+                            <div class="budget__item-wasted">Потрачено:</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">Учёба</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">Покупки</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">Досуг</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">Транспорт</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">Кафе</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">Продукты</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">Здоровье</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">Семья</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">Подарки</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                    </div>
+                    <button class="button button_more">Ещё...</button>
+                </div>
+            </div>
+            
+            <div class="budget__item">
+                <div class="budget__item-header">
+                    <div class="budget__item-value">
+                        <h2 class="budget__item-title">Доходы</h2>
+                        <div class="budget__item-score costs" id="earn">903 руб</div>
+                    </div>
+                </div>
+                <div class="budget__item-body">
+                    <div class="budget__item-wrapper">
+                        <div class="budget__item-row table-title">
+                            <div class="budget__item-category table-name">Категория:</div>
+                            <div class="budget__item-wasted">Заработано:</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">Зарплата</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">Стипендия</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">Выигрыш</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">Кредит</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">От семьи</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                        <div class="budget__item-row">
+                            <div class="budget__item-category">Подарки</div>
+                            <div class="budget__item-wasted">100 руб</div>
+                        </div>
+                    </div>
+                    <button class="button button_more">Ещё...</button>
+                </div>
+            </div>
+
+            <div class="budget__item budget__item_bdn">
+                <h2 class="budget__item-title budget__item-title_op1">Итого:</h2>
+                <div class="budget__btns">
+                    <div class="budget__item-title budget__item-title_op1">Доходы</div>
+                    <div class="budget__item-title budget__item-title_op1">Расходы</div>
+                </div>
+                <div class="progressbar">
+                    <div class="progressbar__strip progressbar__strip_green"></div>
+                    <div class="progressbar__strip progressbar__strip_violet"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bill">
+            <div class="bill__item">
+                <div class="bill__wrapper">
+                    <img src="img/icons/bank.svg" alt="bank-bill" class="bill__icon">
+                    <h2 class="bill__title">В банке</h2>
+                    <div class="bill__score">601 руб</div>
+                </div>
+                <div class="bill__btns">
+                    <button class="button button_w100p" data-use="use">Использовать</button>
+                </div>
+            </div>
+            <div class="bill__item">
+                <div class="bill__wrapper">
+                    <img src="img/icons/card.svg" alt="bank-bill" class="bill__icon">
+                    <h2 class="bill__title">На карте</h2>
+                    <div class="bill__score">601 руб</div>
+                </div>
+                <div class="bill__btns">
+                    <button class="button button_w100p" data-use="use">Использовать</button>
+                </div>
+            </div>
+            <div class="bill__item">
+                <div class="bill__wrapper">
+                    <img src="img/icons/hand.svg" alt="bank-bill" class="bill__icon">
+                    <h2 class="bill__title">Наличные</h2>
+                    <div class="bill__score">601 руб</div>
+                </div>
+                <div class="bill__btns">
+                    <button class="button button_w100p" data-use="use">Использовать</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="plans">
+            <div class="plans__form">
+                <form>
+                    <label for="score">Затрата/Доход</label>
+                    <input type="number" name="score" required id="score">
+                    
+                    <label for="name">Название категории</label>
+                    <input type="text" required name="name" id="name" maxlength="20">
+                    
+                    <label for="add">Пополнить</label>
+                    <input type="radio" id="add" name="operation" value="add">
+                    
+                    <label for="use">Потратить</label>
+                    <input type="radio" id="use" name="operation" value="use">
+                    
+                </form>
+
+                <button class="button button_large">принять</button>
+            </div>
+
+            <div class="plans__wrapper">
+                <div class="plans__item">
+                    <div class="plans__item-body">
+                        <h2 class="plans__item-name">Зарплата</h2>
+                        <div class="plans__item-score">42000 руб</div>
+                    </div>
+                    <div class="plans__item-buttons">
+                        <button class="button button_nobord add">&#10004;выполнить</button>
+                        <button class="button button_nobord delete">&#10008;удалить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator-section">
+            <div class="calculator">
+                <div class="calculator__header">
+                    <div class="calculator__table calculator__account"></div>
+                    <div class="calculator__table calculator__account"></div>
+                    <div class="calculator__table calculator__account"></div>
+                    <div class="calculator__table calculator__result">0.00</div>
+                </div>
+                <div class="calculator__main">
+        
+                    <button class="calculator__btn operation calculator__btn_indigo" id="percent">%</button>
+                    <button class="calculator__btn" id="clear">C</button>
+                    <button class="calculator__btn" id="delete">
+                        <svg width="22" height="22" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <path d="M469.333,64h-320c-14.72,0-26.347,7.467-34.027,18.773L0,255.893l115.307,173.12C122.987,440.32,134.613,448,149.333,448
+                            h320C492.907,448,512,428.907,512,405.333V106.667C512,83.093,492.907,64,469.333,64z M405.333,332.48l-30.187,30.187
+                            l-76.48-76.48l-76.48,76.48L192,332.48L268.48,256L192,179.52l30.187-30.187l76.48,76.48l76.48-76.48l30.187,30.187L328.853,256
+                            L405.333,332.48z" fill="#DC4E41"/>
+                        </svg>
+                    </button>
+                    <button class="calculator__btn operation calculator__btn_indigo" id="divide">/</button>
+                    <button class="calculator__btn operation value">7</button>
+                    <button class="calculator__btn operation value">8</button>
+                    <button class="calculator__btn operation value">9</button>
+                    <button class="calculator__btn operation calculator__btn_indigo" id="multiply">*</button>
+                    <button class="calculator__btn operation value">4</button>
+                    <button class="calculator__btn operation value">5</button>
+                    <button class="calculator__btn operation value">6</button>
+                    <button class="calculator__btn operation calculator__btn_indigo" id="minus">-</button>
+                    <button class="calculator__btn operation value">1</button>
+                    <button class="calculator__btn operation value">2</button>
+                    <button class="calculator__btn operation value">3</button>
+                    <button class="calculator__btn operation calculator__btn_indigo" id="plus">+</button>
+                    <button class="calculator__btn operation value">0</button>
+                    <button class="calculator__btn operation" id="dot">.</button>
+                    <button class="calculator__btn calculator__btn_big" id="equal">=</button>
+        
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="overlay">
+        <div class="overlay__close" id="close">&times;</div>
+        <div class="overlay__operation">
+            <form class="overlay__form">
+                <input class="overlay__sum" type="number" required placeholder="Введите сумму" name="score">
+                <input  type="text" required placeholder="Введите название категории" name="category" maxlength="20">
+            </form>
+            <div class="form__wrapper">
+                <button class="button button_submit button_red" data-use="use">Потратить</button>
+                <button class="button button_submit" data-use="replenish">Пополнить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

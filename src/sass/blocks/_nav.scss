@@ -1,0 +1,94 @@
+.nav {
+    min-height: 91px;
+    padding-bottom: 108px;
+    &__burger {
+        display: none;
+        width: 32px;
+        margin-right: 13px;
+        z-index: 2;
+        position: absolute;
+        cursor: pointer;
+        span {
+            height: 4px;
+            width: 100%;
+            background-color: $main-color;
+            margin-bottom: 3px;
+            display: block;
+        }
+        &-active {
+            span {
+                margin-bottom: -2px;
+                &:nth-child(1) {
+                    transform: translateY(2px) rotate(-45deg);
+                }    
+                &:nth-child(2) {
+                    display: none;
+                }    
+                &:nth-child(3) {
+                    transform: translateY(0px) rotate(45deg);
+                }   
+            }
+        }
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        font-size: 30px;
+        color: $main-color;
+        flex-wrap: wrap;
+        li {
+            display: block;
+            height: 87px;
+            padding: 22px;
+            &:hover {
+                color: $main-color-2;
+                cursor: pointer;
+            }
+        }
+        li.active {
+            border-bottom: 5px solid $sub-color;
+        }
+    }
+}
+
+@media (max-width: 1139px) {
+    .nav {
+        padding-bottom: 60px;
+        ul {
+            font-size: 27px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .nav {
+        padding-bottom: 20px;
+        position: relative;
+        &__burger {
+            display: block;
+        }
+        ul {
+            flex-direction: column;
+            transform: translateX(-110%);
+            font-size: 20px;
+            position: absolute;
+            background-color: #fff;
+            z-index: 1;
+            top: 20px;
+            width: 100%;
+            padding-bottom: 10px;
+            li {
+                width: 100%;
+                height: 63px;
+                padding: 16px;
+            }
+        }
+        &-active {
+            ul {
+                transform: none;
+            }
+        }
+    }
+}

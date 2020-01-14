@@ -1,0 +1,51 @@
+.bill {
+    display: none;
+    &__item {
+        @include border;
+        margin-bottom: 70px;
+        height: 275px;
+        padding-top: 30px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 188px;
+    }
+    &__title {
+        font-size: 45px;
+        color: $main-color;
+    }   
+    &__score {
+        font-size: 45px;
+        color: $main-color-2;
+    }
+    &__btns {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1139px) {
+    .bill {
+        &__title {
+            font-size: 30px;
+        }
+        &__score {
+            font-size: 35px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .bill {
+        &__wrapper {
+            height: 156px;
+            align-content: flex-start;
+            img {
+                display: none;
+            }
+        }
+    }
+}
